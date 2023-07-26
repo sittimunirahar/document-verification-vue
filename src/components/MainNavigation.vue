@@ -4,30 +4,26 @@ import logo from '@/assets/images/Atomsglobal.svg';
 
 <template>
   <div :class="$style.globalNavigation">
-      <!-- <div :class="$style.globalNavigation1"> -->
-        <!-- <div :class="$style.globalNavigationChild" /> -->
-          <div :class="$style.atomsGlobalParent">
-            <div :class="$style.atomsGlobal11">
-                <img alt="" :src="logo" />
-            </div>
-              <div :class="$style.atomsGlobal6">
-                  <img :class="$style.iconography16" alt="" src="Iconography.svg" />
-              </div>
-              <div :class="$style.atomsGlobal7">
-                  <img :class="$style.iconography16" alt="" src="Iconography.svg" />
-              </div>
-              <div :class="$style.atomsGlobal7">
-                  <img :class="$style.iconography16" alt="" src="Iconography.svg" />
-              </div>
-              <div :class="$style.atomsGlobal7">
-                  <img :class="$style.iconography16" alt="" src="Iconography.svg" />
-              </div>
-              <div :class="$style.atomsGlobal7">
-                  <img :class="$style.iconography16" alt="" src="Iconography.svg" />
-              </div>
-          </div>
-          
-      <!-- </div> -->
+    <div :class="$style.atomsGlobalParent">
+    <div :class="$style.atomsGlobal11">
+        <img alt="" :src="logo" />
+    </div>
+        <div :class="$style.atomsGlobal6">
+            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+        </div>
+        <div :class="$style.atomsGlobal7">
+            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+        </div>
+        <div :class="$style.atomsGlobal7">
+            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+        </div>
+        <div :class="$style.atomsGlobal7">
+            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+        </div>
+        <div :class="$style.atomsGlobal7">
+            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+        </div>
+    </div>
   </div>
 </template>
 

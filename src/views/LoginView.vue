@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { useUserStore } from '@/stores/UserStore';
-import AuthService from '../services/AuthService';
-import { reactive } from 'vue';
+import AuthService from "@/services/AuthService";
+import { useUserStore } from "@/stores/UserStore";
+import { reactive } from "vue";
 
 const user = reactive({
-  email: '',
-  password: '',
+  email: "",
+  password: "",
 });
 const store = useUserStore();
 
@@ -15,7 +15,7 @@ const login = async () => {
 
     store.setLoggedIn(true);
     store.setUserData(response.user);
-    console.log('Login successful');
+    console.log("Login successful");
     
   } catch (error) {
     console.log(error);

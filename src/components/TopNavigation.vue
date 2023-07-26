@@ -1,22 +1,19 @@
 <script setup lang="ts">
+import { useUserStore } from "@/stores/UserStore";
+import {ref} from "vue";
 
-  let isDropdownOpen = false;
-  const toggleDropdown = () => {
-    isDropdownOpen = !isDropdownOpen
-  }
-  
-// export default {
-//   data () {
-//     return {
-//       isDropdownOpen: false
-//     }
-//   },
-//   methods: {
-//     toggleDropdown () {
-//       this.isDropdownOpen = !this.isDropdownOpen
-//     }
-//   }
-// }
+const store = useUserStore();
+const user = store.user.userData;
+const isDropdownOpen = ref(false);
+
+const toggleDropdown = () => {
+    isDropdownOpen.value = !isDropdownOpen.value;
+}
+
+const logout = () => {
+    store.setLoggedIn(false);
+}
+
 </script>
 
 <template>
@@ -32,7 +29,7 @@
                   <div :class="$style.imageChild" />
                      <div :class="$style.gg">GG</div>
                   </div>
-                  <div :class="$style.geraldGoh">Gerald Goh</div>
+                  <div :class="$style.toggleUsername">{{ user.name }}</div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M16.2826 9.25506C15.9859 8.91498 15.5198 8.91498 15.2231 9.25506L12.0025 12.9474L8.78189 9.25506C8.48526 8.91498 8.01911 8.91498 7.72248 9.25506C7.42584 9.59514 7.42584 10.1296 7.72248 10.4696L11.4516 14.7449C11.7483 15.085 12.2144 15.085 12.511 14.7449L16.2402 10.4696C16.5792 10.1296 16.5792 9.59514 16.2826 9.25506Z" fill="#151F32"/>
                   </svg>
@@ -46,14 +43,14 @@
                         <div :class="$style.gg1">GG</div>
                     </div>
                     <div :class="$style.gwendolynGohParent">
-                        <b :class="$style.yourProgress">Gerald Goh</b>
+                        <b :class="$style.yourProgress">{{ user.name }}</b>
                         <div :class="$style.manager">Recipient</div>
                     </div>
                 </div>
                 <!-- <div :class="$style.frameItem" /> -->
                 
                 <div :class="$style.frameInner" />
-                <button :class="$style.atomsUtility17">
+                <button :class="$style.atomsUtility17" @click="logout">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M10.1667 2.00003H2.33333C2.13333 2.00003 2 2.13336 2 2.33336V13.6667C2 13.8667 2.13333 14 2.33333 14H10.1667C10.3667 14 10.5 13.8667 10.5 13.6667V9.83336C10.5 9.63336 10.3667 9.50003 10.1667 9.50003C9.96667 9.50003 9.83333 9.63336 9.83333 9.83336V13.3334H2.66667V2.6667H9.83333V6.1667C9.83333 6.3667 9.96667 6.50003 10.1667 6.50003C10.3667 6.50003 10.5 6.3667 10.5 6.1667V2.33336C10.5 2.13336 10.3333 2.00003 10.1667 2.00003Z" fill="#151F32"/>
                   <path d="M13.7334 8.13336C13.7667 8.06669 13.7667 7.96669 13.7334 7.86669C13.7 7.83336 13.7 7.80003 13.6667 7.76669L11.7667 5.86669C11.6334 5.73336 11.4334 5.73336 11.3 5.86669C11.1667 6.00003 11.1667 6.20003 11.3 6.33336L12.6 7.63336H7.73336C7.53336 7.63336 7.40002 7.76669 7.40002 7.96669C7.40002 8.16669 7.53336 8.30003 7.73336 8.30003H12.6L11.3 9.66669C11.1667 9.80003 11.1667 10 11.3 10.1334C11.4334 10.2667 11.6334 10.2667 11.7667 10.1334L13.6667 8.23336C13.6667 8.20003 13.7 8.16669 13.7334 8.13336Z" fill="#151F32"/>
@@ -111,7 +108,7 @@
         width: 24px;
         height: 24px;
     }
-    .geraldGoh {
+    .toggleUsername {
         position: relative;
         line-height: 24px;
         color: #151f32;

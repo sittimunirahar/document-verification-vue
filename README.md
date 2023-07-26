@@ -1,8 +1,9 @@
 ## Document Verification Dashboard SPA
   - [About](#about)
-  - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Running Server](#running-server)
   - [Running Test](#running-test)
+  - [Linting](#linting)
   - [Other Documentations](#other-documentations)
 
 ***
@@ -42,6 +43,13 @@ npm run dev
 ```sh
 npm run build
 ```
+***
+
+### Running Server
+
+```sh
+node src/server.js
+```
 
 ***
 
@@ -70,7 +78,7 @@ npm run test:e2e
 ```
 *** 
 
-### Styling
+### Linting
 
 #### Lint with [ESLint](https://eslint.org/)
 
@@ -83,6 +91,6 @@ npm run lint
 
  - Refactoring or Improvement Plan: `ROADMAP.md`
  - Technical documentations: in `docs/`
-    1. `Sequence Diagram.png`
+    1. `Architecture Diagram.png`
     2. `Verification Flowchart.png`
-    3. `Architecture Comparison Table.png`
+    3. `Flow Diagram.png`
