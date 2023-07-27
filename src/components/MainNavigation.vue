@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import logo from '@/assets/images/Atomsglobal.svg';
+import icon1 from '@/assets/images/1.svg';
 </script>
 
 <template>
@@ -9,19 +10,19 @@ import logo from '@/assets/images/Atomsglobal.svg';
         <img alt="" :src="logo" />
     </div>
         <div :class="$style.atomsGlobal6">
-            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+            <img :class="$style.iconography16" alt="" src="@/assets/images/1.svg" />
         </div>
         <div :class="$style.atomsGlobal7">
-            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+            <img :class="$style.iconography16" alt="" src="@/assets/images/2.svg" />
         </div>
         <div :class="$style.atomsGlobal7">
-            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+            <img :class="$style.iconography16" alt="" src="@/assets/images/3.svg" />
         </div>
         <div :class="$style.atomsGlobal7">
-            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+            <img :class="$style.iconography16" alt="" src="@/assets/images/4.svg" />
         </div>
         <div :class="$style.atomsGlobal7">
-            <img :class="$style.iconography16" alt="" src="Iconography.svg" />
+            <img :class="$style.iconography16" alt="" src="@/assets/images/5.svg" />
         </div>
     </div>
   </div>

@@ -17,9 +17,6 @@ const store = useUserStore();
 .app {
   width: 100%;
   height: 100%;
-  overflow-y: auto;
-  text-align: left;
   font-size: 28px;
-  color: #000;
 }
 </style>

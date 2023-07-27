@@ -7,6 +7,17 @@ const store = useUserStore();
 </script>
 
 <template>
-  <CareerGoal v-if="!store.isPersonal"/>
-  <RecentDocument />
+  <main class="content">
+    <CareerGoal v-if="!store.isPersonal"/>
+    <RecentDocument />
+  </main>
 </template>
+
+<style>
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+}
+</style>
